@@ -1,0 +1,66 @@
+﻿@model PagedList.IPagedList<FullStackTest.Models.Customer>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Customer List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer List</h2>
+
+<p>
+    <br />
+    <div class="form-group">
+        <label>First Name: </label>
+        <input id="firstName" class="form-control" type="text" name="firstName" value=""/>
+        <label>Last Name: </label>
+        <input id="lastName" class="form-control" type="text" name="lastName" value=""/>
+        <label>Email: </label>
+        <input id="email" class="form-control" type="text" name="email" value=""/>
+        <br />
+        <button id="btnAdd" class="btn btn-default" type="button" name="submit">Add new</button>
+    </div>
+</p>
+<table id="custTable" class="table">
+    <tr id="headers">
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th></th>
+    </tr>
+    <tbody id="custTBody">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input class="disabled form-firstName form-control" type="text" name="firstName" value="@item.FirstName" disabled />
+                </td>
+                <td>
+                    <input class="disabled form-lastName form-control" type="text" name="lastName" value="@item.LastName" disabled />
+                </td>
+                <td>
+                    <input class="disabled form-email form-control" type="email" name="email" value="@item.Email" disabled />
+                </td>
+                <td>
+                    <button class="btn-edit btn btn-default" type="button" value="@item.CustomerID">Edit</button>
+                    <button class="btn-save btn btn-default" type="button" value="@item.CustomerID">Save</button>
+                    <button class="btn-delete btn btn-default" type="button" value="@item.CustomerID">Delete</button>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page }))
+
+@Scripts.Render("~/bundles/Ajax")

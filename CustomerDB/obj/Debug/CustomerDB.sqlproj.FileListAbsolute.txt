@@ -1,0 +1,9 @@
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\bin\Debug\CustomerDB.dacpac
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\bin\Debug\CustomerDB.dll
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\bin\Debug\CustomerDB.pdb
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\obj\Debug\CustomerDB.dll
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\obj\Debug\CustomerDB.pdb
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\obj\Debug\Model.xml
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\obj\Debug\refactor.xml
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\obj\Debug\postdeploy.sql
+F:\Career Research\Programming Test\FullStackTest\CustomerDB\obj\Debug\predeploy.sql
